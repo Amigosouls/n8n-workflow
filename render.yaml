@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: n8n
+    runtime: docker
+    repo: https://github.com/n8n-io/n8n
+    dockerfilePath: ./docker/images/n8n/Dockerfile
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: "arun.joseph"
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: "amisouaru@22"
+      - key: N8N_ENCRYPTION_KEY
+        value: "kL9JGzDLJz3fsdkfdslk93jLfdslke4Fs9+skfks=="  # You can generate your own if needed
+      - key: N8N_HOST
+        value: "0.0.0.0"
+      - key: N8N_PORT
+        value: "5678"
+      - key: NODE_ENV
+        value: "production"
+      - key: EXECUTIONS_PROCESS
+        value: "main"
+      - key: TZ
+        value: "Asia/Kolkata"
